@@ -21,7 +21,7 @@ We will walk through how to download __the Wooldridge datasets__ and apply them 
 
 <br>
 
->**NOTE:** Problem Set 10.11 is the course assignment, due November 10, 2025.
+>**NOTE:** Problem Set 10.11. is the course assignment, due November 10, 2025.
 
 <br>
 
@@ -55,11 +55,8 @@ describe
 reg lpass y98 y99 y00 lfare ldist ldistsq
 ```
 
-hint
-```
-,vce(cluster id)
-,vce(robust)
-```
+>**Hint: ... and obtain the fully robust standard error ..** `vce(cluster id)` vs. `vce(robust)`
+
 **.... All other codes will be available during the session.**
 
 
