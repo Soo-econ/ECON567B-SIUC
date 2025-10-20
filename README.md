@@ -42,7 +42,7 @@ net get eacsap, replace
 ```
 
 ## [2] Problem Set 8.15.
-We will use the dataset `AIRFARE.DTA` to solve problemset 8.15.
+We will use the dataset `AIRFARE.DTA` to solve problem set 8.15.
 ```
 use airfare, replace
 ```
@@ -67,7 +67,7 @@ hint
 <br>
 
 ## [3] Problem Set 10.12.
-We will use the dataset `WAGEPAN.DTA` to solve problemset 10.12.
+We will use the dataset `WAGEPAN.DTA` to solve problem set 10.12.
 
 ```
 use wagepan, replace
