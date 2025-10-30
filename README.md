@@ -107,7 +107,7 @@ xtreg lwage i.year educ black hisp exper expersq married union, fe
 xtreg lwage c.educ##i.year expersq married union i.year, fe
 ```
 
-## 10.12-(e) FE assumption: strictly exogeneity
+## 10.12-(e) FE assumption: strict exogeneity
 > After setting the panel structure using the `xtset` command, you can easily create lagged and lead variables using the prefixes `L.` and `F.`, respectively.
 >
 > For example:
