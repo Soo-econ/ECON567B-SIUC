@@ -9,7 +9,7 @@ I am sharing some of the basic Stata syntax we covered in class!
 
 ## Contents
 - [frame](#frame-section)
-
+- [Other Codes](#hodgepodge)
 
 ## 1. Using `frame` to Manage Multiple Datasets <a id="frame-section"></a>
 
@@ -94,3 +94,9 @@ frget hours bus, from(wagepan)
 In this way, you can easily **create frames, load datasets, and link them**, making your workflow more flexible and efficient!
 
 
+# Hodgepodge 
+
+```stata
+gen d = (year == 1989)
+label var d "=1 if year = 1989"
+```
