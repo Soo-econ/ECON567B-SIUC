@@ -9,7 +9,7 @@ I am sharing some of the basic Stata syntax we covered in class!
 
 ## Contents
 - [frame](#frame-section)
-- [Other Codes](#hodgepodge)
+- [Other codes](#hodgepodge)
 
 ## 1. Using `frame` to Manage Multiple Datasets <a id="frame-section"></a>
 
@@ -99,4 +99,12 @@ In this way, you can easily **create frames, load datasets, and link them**, mak
 ```stata
 gen d = (year == 1989)
 label var d "=1 if year = 1989"
+```
+```
+order d,a(year)
+order nr year d black bus
+```
+> compute each individual's average wage across years, using `bysort` and `egen`
+```
+bys nr: egen ave_wage = mean(lwage)
 ```
