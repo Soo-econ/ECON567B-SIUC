@@ -23,7 +23,13 @@ We will walk through how to download __the Wooldridge datasets__ and apply them 
 
 <br>
 
->**NOTE:** Problem Set 10.11. is the course assignment, due November 10, 2025.
+**After the session update:**
+> **NOTE:** The course assignment is due **Monday, November 17, 2025.**
+> 1. Problem Set 10.11 (a) & (b)
+> 2. Problem Set 10.12 (a) through (f)
+>
+> Please read each question thoroughly and submit a well-organized write-up that includes both your answers and analysis results, along with your code file on D2L.
+I’ve included some code hints below that may be helpful as you work through the problems!
 
 <br>
 
@@ -57,7 +63,6 @@ describe
 reg lpass y98 y99 y00 lfare ldist ldistsq
 ```
 
->**Hint: ... and obtain the fully robust standard error ..** `vce(cluster id)` vs. `vce(robust)`
 
 **.... All other codes will be available during the session.**
 
@@ -73,10 +78,49 @@ use wagepan, replace
 discribe
 ```
 
-**.... All other codes will be available during the session.**
+```
+xtset nr year
+```
+```
+reg lwage i.year educ black hisp exper expersq married union
+```
+```
+reg lwage i.year educ black hisp exper expersq married union, cluster(nr)
+```
+>**Hint: ...  fully robust standard error ..** `cluster(nr)` vs. `vce(robust)`
+>
+> robust to both heteroskedasticity and serial correlation
 
+## 10.12-(b) Random Effect 
+```
+xtreg lwage i.year educ black hisp exper expersq married union, re
+```
+## 10.12-(c) Fixed Effects 
+```
+xtreg lwage i.year educ black hisp exper expersq married union, fe
+```
+## 10.12-(d) 
+> `c.educ##i.year` includes main effects and their interactions; equivalent to writing  `i.year educ c.educ#i.year`
+> 
+> `c.educ#i.year` includes only the interation terms.
+```
+xtreg lwage c.educ##i.year expersq married union i.year, fe
+```
 
-
+## 10.12-(e) FE assumption: strictly exogeneity
+> After setting the panel structure using the `xtset` command, you can easily create lagged and lead variables using the prefixes `L.` and `F.`, respectively.
+>
+> For example:
+- To include $y_{t-1}$ (the one-period lag of $y$) as a regressor, use:
+```stata
+L1.y
+```
+- To include $y_{t+1}$ (the one-period lead of $y$), use:
+```
+F1.y
+```
+Similary, $y_{t+2}$ would be `F2.y`. `L'i'.` or  `F'i'.` indicates the $i$-th lag or $i$-th lead of the variable. 
+  
 
 <br>
 
