@@ -28,7 +28,7 @@ We will walk through how to download __the Wooldridge datasets__ and apply them 
 > 1. Problem Set 10.11 (a) & (b)
 > 2. Problem Set 10.12 (a) through (f)
 >
-> Please read each question thoroughly and submit a well-organized write-up that includes both your answers and analysis results, along with your code file on D2L.
+> Please read each question thoroughly and submit your answers, results, and code file on D2L.
 I’ve included some code hints below that may be helpful as you work through the problems!
 
 <br>
