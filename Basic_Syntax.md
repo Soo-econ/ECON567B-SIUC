@@ -63,7 +63,7 @@ frame lowbirth: use lowbirth, clear
 ```
 This will load each dataset into its own frame.
 
-You can later switch to any frame you need using the cwf command:
+You can later switch to any frame you need using the `cwf` command:
 ```
 cwf first 
 ```
